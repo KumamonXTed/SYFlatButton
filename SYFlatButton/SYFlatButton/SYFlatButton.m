@@ -373,6 +373,7 @@
 - (CATextLayer *)titleLayer {
     if (_titleLayer == nil) {
         _titleLayer = [[CATextLayer alloc] init];
+        _titleLayer.contentsScale = [NSScreen mainScreen].backingScaleFactor;
         _titleLayer.delegate = self;
     }
     return _titleLayer;
